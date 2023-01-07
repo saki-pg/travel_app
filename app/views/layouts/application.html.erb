@@ -42,17 +42,22 @@
         <div class="hamburger-menu">
         <input type="checkbox" id="menu-btn-check">
         <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+
+
           <div class="menu-content">
+
             <ul>
               <li>
                 <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
               </li>
 
               <li><%= link_to 'ルーム登録', :new_post %></li>
-              <li><%= link_to '予約済みルーム一般',  "/login" %></li>
+              <li><%= link_to '予約済みルーム一般', reservation_path %></li>
               <li><%= link_to '登録済みルーム一般', posts_list_path %></li>
               <li><%= link_to 'プロフィール', users_profile_path %></li>
               <li><%= link_to 'ログアウト', '/logout', {method: :post} %></li>
+
             </ul>
           </div>
         </div>
