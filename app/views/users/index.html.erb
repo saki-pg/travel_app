@@ -1,0 +1,56 @@
+
+
+<div class="top">
+  <div class="box">
+    <h3>Potepan Shareでまだ体験したことのない旅をしよう</h3>
+    <p>エリア</p>
+
+    <div class="header-search-box">
+      <%= form_with url: posts_search_path,method: :get,local: true do |f| %>
+        <%= f.text_field :area ,placeholder:"エリア検索",class:"header-search-input"%>
+        <% submit_tag %>
+        <ul>
+          <li><%= f.submit "探す"%></li>
+        </ul>
+      <% end %>
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+
+  </div>
+</div>
+
+<div class="recommend">
+  <h3>おすすめのエリア</h3>
+
+
+   <div>
+      <div class="panel-item">
+        <%= link_to '/posts/search?utf8=%E2%9C%93&area=%E6%9D%B1%E4%BA%AC',class:"room-link" do %>
+          <span>東京</span>
+          <%=image_tag '/assets/img_tokyo.jpg', size: '250x400' %>
+        <% end %>
+      </div>
+      <div class="panel-item">
+        <%= link_to '/posts/search?utf8=%E2%9C%93&area=%E5%A4%A7%E9%98%AA',class:"room-link" do %>
+          <span>大阪</span>
+          <%=image_tag '/assets/img_osaka.jpg', size: '250x400' %>
+        <% end %>
+      </div>
+      <div class="panel-item">
+        <%= link_to '/posts/search?utf8=%E2%9C%93&area=%E4%BA%AC%E9%83%BD',class:"room-link" do %>
+          <span>京都</span>
+          <%=image_tag '/assets/img_kyoto.jpg', size: '250x400' %>
+        <% end %>
+      </div>
+      <div class="panel-item">
+        <%= link_to '/posts/search?utf8=%E2%9C%93&area=%E5%8C%97%E6%B5%B7%E9%81%93',class:"room-link" do %>
+          <span>北海道</span>
+          <%=image_tag '/assets/img_sapporo.jpg', size: '250x400' %>
+        <% end %>
+      </div>
+    </div>
+
+</div>
+
+
+

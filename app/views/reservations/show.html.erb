@@ -1,0 +1,29 @@
+  <div class="row">
+    <div class="row reservation-content">
+      <label>予約した部屋</label>
+      <div class="col-9">
+        <%=link_to @post.name,post_path(@post.id) %>
+      </div>
+    </div>
+
+    <div class="row reservation-content">
+      <label>開始日</label>
+      <div class="col-9">
+        <%= @reservation.start_date %>
+      </div>
+    </div>
+
+    <div class="row reservation-content">
+      <label>終了日</label>
+      <div class="col-9">
+        <%= @reservation.end_date %>
+      </div>
+    </div>
+
+    <div class="row reservation-content">
+      <label>価格</label>
+      <div class="col-9">
+        <%= @reservation.total_price %>円
+      </div>
+    </div>
+  </div>

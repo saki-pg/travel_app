@@ -1,0 +1,32 @@
+<h3>ユーザー編集</h3>
+
+ <%= form_with model: @user do |f| %>
+   <table>
+     <tr>
+       <th><%= f.label :email ,"メールアドレス" %></th>
+       <td><%= f.text_field :email %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :passwords ,"変更後パスワード（変更する場合のみ入力）" %></th>
+       <td><%= f.text_field :passwords %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :passwords_confirmation ,"パスワード確認用（変更する場合のみ入力）" %></th>
+       <td><%= f.text_field :passwords_confirmation %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :passwords ,"現在のパスワード" %></th>
+       <td><%= f.text_field :passwords %></td>
+     </tr>
+   </table>
+
+   <div>
+     <ul>
+       <li><%= f.submit "更新" %></li>
+       <li><%= link_to "戻る", :users %></li>
+     </ul>
+   </div>
+ <% end %>

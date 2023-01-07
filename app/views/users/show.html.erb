@@ -1,0 +1,19 @@
+ <h3>アカウント</h3>
+
+ <table>
+   <tr>
+     <th>メールアドレス</th>
+     <td><%= @user.email %></td>
+   </tr>
+   <tr>
+     <th>パスワード</th>
+     <td><%= @user.passwords %></td>
+   </tr>
+ </table>
+
+ <div>
+   <ul>
+     <li><%= link_to "編集", :users %></li>
+   </ul>
+ </div>
+

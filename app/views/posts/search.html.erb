@@ -1,0 +1,26 @@
+
+<div class="room">
+  <div class="row">
+    <% if @post.present? %>
+      <h3 class="search-number">検索結果 <%= @cnt %>件です</h3>
+      <% @post.each do |post| %>
+        <div>
+          <div class="post-search-frame">
+            <%= link_to post_path(post.id) do %>
+              <div class="search-profile-image">
+                <%= image_tag post.picture ,width:"100%",height:"100%" %>
+              </div>
+              <div class="post-search-profile">
+                <div class="search-profile-name"><%= post.room_name %></div>
+                <div class="search-profile-address"><%= post.address %></div>
+                <div class="search-profile-price">¥<%= post.price %></div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <h3>検索結果はありませんでした</h3>
+    <% end %>
+  </div>
+</div>
