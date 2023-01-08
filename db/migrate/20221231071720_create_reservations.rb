@@ -6,6 +6,7 @@ class CreateReservations < ActiveRecord::Migration[6.1]
       # t.text :room_introduction
       # t.integer :price
 
+      belongs_to :user
       t.timestamps
     end
   end

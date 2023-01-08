@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2022_12_31_071720) do
     t.integer "price"
     t.text "address"
     t.string "room_image"
+    t.text "person"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,6 +35,8 @@ ActiveRecord::Schema.define(version: 2022_12_31_071720) do
     t.string "email"
     t.string "passwords"
     t.string "passwords_confirmation"
+    t.string "image"
+    t.text "introduction"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
