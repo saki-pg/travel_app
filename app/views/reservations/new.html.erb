@@ -1,0 +1,28 @@
+<div class="container reservation-new">
+  <div class="row">
+    <div>
+      <div class="reservation-new-nav">
+        <h2 class="reservation-new-title">予約確認画面</h2>
+        <h3 class="price-icon"><%= @post.price %> /円</h3>
+        <div class="reservations-new-date-select">
+
+          <%=form_with model:@reservation do |r| %>
+            <div>開始日</div>
+            <%= r.date_field :start_date ,:value =>@reservation.start_date,class:"form-control" %>
+            <div>終了日</div>
+            <%= r.date_field :end_date ,:value =>@reservation.end_date,class:"form-control" %>
+            <div>使用日数：<%= @days %>日　</div>
+            <div>人数</div>
+            <%= r.text_field :person ,:value =>@reservation.person,class:"form-control" %>
+            <div>合計金額</div>
+            <%= r.text_field :total_price ,:value =>@price,class:"form-control" %>
+            <%= r.hidden_field :post_id, :value =>@reservation.post_id %>
+            <%= r.hidden_field :user_id, :value =>@reservation.user_id %>
+            <%= r.submit "予約を確定する",class:"btn-primary" %>
+            <%= link_to "ルーム詳細に戻る",post_path(@post.id)%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<% if @error_message %>
+  <div class = "form_error">
+    <% @error_message %>
+  </div>
+<% end %>
+  <div class="form">
+    <div class="form_body">
+
+    <%= form_tag(login_path) do %>
+      <p>メールアドレス</p>
+      <input type="email" name="email" value = "<% @email %>">
+      <p>パスワード</p>
+      <input type="password" name="passwords" value = "<% @passwords %>">
+
+      <input type="submit" value="ログイン">
+      <p><%= link_to "新しいアカウントを作成", :new_user %></p>
+    <% end %>
+
+    </div>
+  </div>
+

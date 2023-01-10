@@ -1,0 +1,38 @@
+<div class="container post-show">
+
+  <div class="row">
+    <div>
+      <%= image_tag @post.picture ,class:"post-show-picture" %>
+        <div class="post-show-detile">
+
+          <div class="post-show-detile-icon">
+            <%= image_tag @user.image ,style: "border-radius: 50%",:size => "70x70" %>
+          </div>
+
+          <div class="post-show-profile">
+            <p class="post-show-profile-name"><%= @post.name %></p>
+            <p class="post-show-profile-adress"><%= @post.address %></p>
+          </div>
+
+        </div>
+      <p class="post-show-profile-intro"><%= @post.information %></p>
+    </div>
+
+    <div>
+      <h4 class="price-icon"><%= @post.price %> /円</h5>
+        <div class="post-show-date-select">
+          <%=form_with model:@reservation ,url: new_reservation_path,local:true,method: :get do |r| %>
+            <label>開始日</label>
+            <%= r.date_field :start_date ,class:"post-show-form" %>
+            <label>終了日</label>
+            <%= r.date_field :end_date ,class:"post-show-form" %>
+            <label>人数</label>
+            <%= r.text_field :person, type:"number" ,class:"post-show-form" %>
+          <% end %>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
