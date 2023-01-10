@@ -12,5 +12,6 @@ class Post < ApplicationRecord
     dimension: { width: { max: 500 }, height: { max: 500 }}
 
   belongs_to :user
+
 end
 
