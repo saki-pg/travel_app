@@ -9,8 +9,6 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.text :introduction
 
 
-      has_many :posts
-      has_many :resavations
       t.timestamps
     end
   end

@@ -12,7 +12,6 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :room_image
       t.text :person
 
-      belongs_to :user
       t.timestamps
     end
   end

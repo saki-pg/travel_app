@@ -11,9 +11,6 @@ class Post < ApplicationRecord
     size: { less_than_or_equal_to: 5.megabytes },
     dimension: { width: { max: 500 }, height: { max: 500 }}
 
-
-
-
   belongs_to :user
 end
 
